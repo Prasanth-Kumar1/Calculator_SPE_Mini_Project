@@ -13,25 +13,25 @@ public class CalculatorTests {
     public void testSqRt() {
         double a = 4;
         double expectedResult = 2.0;
-        long result = calculator.sqRt(a);
-        Assert.assertEquals(expectedResult, result);
+        double result = calculator.sqRt(a);
+        Assert.assertEquals(expectedResult, result, 0.0005);
         ;
     }
 
     @Test
-    public void testFcat() {
+    public void testFact() {
         double a = 5;
         double expectedResult = 120.0;
         double result = calculator.fact(a);
-        Assert.assertEquals(expectedResult, result);
+        Assert.assertEquals(expectedResult, result, 0.0005);
     }
 
     @Test
     public void testLog() {
         double a = 10;
-        double expectedResult = 1.0;
+        double expectedResult = 2.3025;
         double result = calculator.log(a);
-        Assert.assertEquals(expectedResult, result);
+        Assert.assertEquals(expectedResult, result, 0.0005);
     }
 
     @Test
@@ -40,6 +40,6 @@ public class CalculatorTests {
         double b = 6;
         double expectedResult = 4096.0;
         double result = calculator.pow(a, b);
-        Assert.assertEquals(expectedResult, result);
+        Assert.assertEquals(expectedResult, result, 0.00005);
     }
 }
