@@ -12,22 +12,22 @@ pipeline {
       sh 'mvn test'
      }
      }
-    //  stage('DOCKER IMAGE'){
-    //  steps{
-    //   sh 'docker build -t puneethk26/di:calimg .'
-    //  }
-    //  }
-    //  stage('PUBLISH TO DockerHub')
- 	// 	{
- 	// 	    steps
- 	// 	    {
- 	//         	withDockerRegistry([ credentialsId: "DockerHub", url: "" ])
- 	//         	{
- 	//         		sh 'docker push puneethk26/di:calimg'
+     stage('DOCKER IMAGE'){
+     steps{
+      sh 'docker build -t puneethk26/di:calimg .'
+     }
+     }
+     stage('PUBLISH TO DockerHub')
+ 		{
+ 		    steps
+ 		    {
+ 	        	withDockerRegistry([ credentialsId: "DockerHub", url: "" ])
+ 	        	{
+ 	        		sh 'docker push puneethk26/di:calimg'
 
- 	//       		}
- 	// 	    }
- 	// 	}
+ 	      		}
+ 		    }
+ 		}
     // stage('Deploy to Rundeck') {
     //   agent any
     //   steps {
