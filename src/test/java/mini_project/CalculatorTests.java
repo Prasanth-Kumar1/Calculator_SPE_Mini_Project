@@ -39,7 +39,7 @@ public class CalculatorTests {
         double a = 4;
         double b = 6;
         double expectedResult = 4096.0;
-        double result = calculator.fact(a, b);
-        Assert.assertEquals(expectedResult, result, 0.00005);
+        double result = calculator.pow(a, b);
+        Assert.assertEquals(expectedResult, result);
     }
 }
