@@ -14,7 +14,7 @@ pipeline {
      }
      stage('DOCKER IMAGE'){
      steps{
-      sh 'docker build -t puneethk26/di:calimg .'
+      sh 'docker build -t prasanthkumar1/di:calimg .'
      }
      }
      stage('PUBLISH TO DockerHub')
@@ -23,7 +23,7 @@ pipeline {
  		    {
  	        	withDockerRegistry([ credentialsId: "DockerHub", url: "" ])
  	        	{
- 	        		sh 'docker push puneethk26/di:calimg'
+ 	        		sh 'docker push prasanthkumar1/di:calimg'
 
  	      		}
  		    }
