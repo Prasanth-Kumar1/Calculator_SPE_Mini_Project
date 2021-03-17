@@ -31,10 +31,6 @@ public class calculator {
     }
 
     public static void main(String[] args) {
-        // Scanner obj = new Scanner(System.in);
-        // System.out.println("Enter the two numbers: ");
-        // double x = obj.nextDouble();
-        // double y = obj.nextDouble();
         double x, y, result;
         x = 4;
         y = 6;
